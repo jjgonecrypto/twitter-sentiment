@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/justinjmoses/twitter-sentiment/issues"
   },
-  "homepage": "https://github.com/justinjmoses/twitter-sentiment#readme"
+  "homepage": "https://github.com/justinjmoses/twitter-sentiment#readme",
+  "dependencies": {
+    "sentiment": "^2.1.0",
+    "twitter": "^1.4.0"
+  }
 }
