@@ -29,6 +29,8 @@ module.exports = ({ track, minFollowers = 0 }) => {
         emitter.on('error', err => readable.emit('error', err))
 
         emitter.on('end', () => readable.push(null))
+
+        readable.once('destroy', () => emitter.destroy())
     })
 
     return readable

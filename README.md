@@ -32,4 +32,7 @@ readable.pipe(new Writable({
         next(null)
      }
 }))
+
+// to end the twitter stream connect, emit destroy
+readable.emit('destroy')
 ```
