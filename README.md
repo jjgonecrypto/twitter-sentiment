@@ -3,7 +3,7 @@ Node readable stream to track twitter sentiment via the streaming endpoint
 
 ![](https://media.giphy.com/media/z6OjrU9wRXNXW/giphy.gif)
 
-##Installation
+## Installation
 
 `npm i twitter-sentiment`
 
@@ -16,15 +16,15 @@ export TWITTER_CONSUMER_ACCESS_TOKEN="..."
 export TWITTER_CONSUMER_ACCESS_KEY="..."
 ```
 
-##Usage
+## Usage
 
 ```javascript
 const twitterSentiment = require('twitter-sentiment')
 
 const Writable = require('stream').Writable
 
-const readable = twitterSentiment({ track: 'clinton', minFollowers: 10000 }) 
-readable.pipe(new Writable({ 
+const readable = twitterSentiment({ track: 'clinton', minFollowers: 10000 })
+readable.pipe(new Writable({
     objectMode: true,
     write(chunk, enc, next) {
         console.log(chunk.text)
